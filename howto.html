@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>DG's HowTo</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-05-16 20:09:53 CEST"/>
+<meta name="author" content="Davide Gerbaudo"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<style type="text/css">
+code { border: 1px solid #AEBDCC; background-color:#F3F5F7; }
+</style>
+<script type="text/javascript" src="org-info.js"></script>
+<script type="text/javascript" >
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "1");
+org_html_manager.set("LINK_HOME", "http://orgmode.org");
+org_html_manager.set("LINK_UP", "http://orgmode.org/worg/");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "0");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">DG's HowTo</h1>
+
+
+
+<p>
+This is just a list of things I often do, and always forget.
+</p>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Find </a></li>
+<li><a href="#sec-2">2 Printing, ps and pdf </a>
+<ul>
+<li><a href="#sec-2-1">2.1 concatenate pdf files: </a></li>
+<li><a href="#sec-2-2">2.2 extract pages from a pdf file </a></li>
+<li><a href="#sec-2-3">2.3 Print </a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 Job processing (Vjets) </a></li>
+<li><a href="#sec-4">4 Bash </a>
+<ul>
+<li><a href="#sec-4-1">4.1 Remove whitespace from filenames. </a></li>
+<li><a href="#sec-4-2">4.2 ls with numeric permission </a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 Generic tasks </a></li>
+<li><a href="#sec-6">6 CERN </a></li>
+<li><a href="#sec-7">7 ATLAS </a>
+<ul>
+<li><a href="#sec-7-1">7.1 Getting started: </a></li>
+<li><a href="#sec-7-2">7.2 Tools: </a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 IFAE </a>
+<ul>
+<li><a href="#sec-8-1">8.1 Datasets </a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9 cpp </a>
+<ul>
+<li><a href="#sec-9-1">9.1 Documentation </a></li>
+</ul>
+</li>
+<li><a href="#sec-10">10 cvs </a></li>
+<li><a href="#sec-11">11 svn </a>
+<ul>
+<li><a href="#sec-11-1">11.1 Configuration </a>
+<ul>
+<li><a href="#sec-11-1-1">11.1.1 Enable kerberos authentication </a></li>
+<li><a href="#sec-11-1-2">11.1.2 Ignore files that should not be tracked: </a></li>
+</ul>
+</li>
+<li><a href="#sec-11-2">11.2 Checkout </a>
+<ul>
+<li><a href="#sec-11-2-1">11.2.1 Checkout only the trunk. and not all the tags </a></li>
+</ul>
+</li>
+<li><a href="#sec-11-3">11.3 Create a local repository to play with </a></li>
+<li><a href="#sec-11-4">11.4 Getting information </a>
+<ul>
+<li><a href="#sec-11-4-1">11.4.1 Filter commits </a></li>
+</ul>
+</li>
+<li><a href="#sec-11-5">11.5 Tags </a>
+<ul>
+<li><a href="#sec-11-5-1">11.5.1 Create a tag </a></li>
+<li><a href="#sec-11-5-2">11.5.2 Update a working copy to another tag </a></li>
+</ul>
+</li>
+<li><a href="#sec-11-6">11.6 Diff </a>
+<ul>
+<li><a href="#sec-11-6-1">11.6.1 list differences between two tags </a></li>
+<li><a href="#sec-11-6-2">11.6.2 diff without withespaces </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-12">12 Emacs </a>
+<ul>
+<li><a href="#sec-12-1">12.1 Macros </a></li>
+<li><a href="#sec-12-2">12.2 org-mode </a></li>
+</ul>
+</li>
+<li><a href="#sec-13">13 git </a>
+<ul>
+<li>
+<ul>
+<li><a href="#sec-13-1">13.1 Fix mistakes </a></li>
+<li><a href="#sec-13-2">13.2 Investigate </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-14">14 screen </a>
+<ul>
+<li><a href="#sec-14-1">14.1 My screenrc </a></li>
+<li><a href="#sec-14-2">14.2 Fix suspended output </a></li>
+</ul>
+</li>
+<li><a href="#sec-15">15 Media </a>
+<ul>
+<li><a href="#sec-15-1">15.1 Latex and kindle </a></li>
+<li><a href="#sec-15-2">15.2 export youtube video </a></li>
+<li><a href="#sec-15-3">15.3 Create a divx from a dvd </a>
+<ul>
+<li><a href="#sec-15-3-1">15.3.1 Two pass encode </a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Find </h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>find files excluding root ones <code>find /some_path -path '*root' -prune   -o -print</code>
+</li>
+<li>find and remove core files <code>find /some_path -name '*core*' -print   -exec rm {} \;</code>
+</li>
+<li>find and tar everything but root files
+
+
+
+<pre class="example">find /some_path -path '*root' -print &gt; /tmp/fileListRoot
+tar cvzf /outputFile-`date +%F`.tgz --exclude-from=/tmp/fileListRoot /some_path
+</pre>
+
+
+</li>
+<li>find broken links (note: this one also finds some files that are not
+  readable when non-root) <code>find / -type l ! -exec test -r {} \;   -print</code> or (this one also show what they point to)
+<pre class="example">
+find /usr/bin -type l | (while read FN ; do test -e "$FN" || ls -ld "$FN"; done)
+</pre>
+
+<p>  see also  <a href="http://www.gentoo-wiki.info/HOWTO_Find_broken_links">http://www.gentoo-wiki.info/HOWTO_Find_broken_links</a>
+</p></li>
+<li>grep recursively only on files with a certain name: <code>find /some_path   -name \*py -exec grep -q SetOptStat {} \; -print</code>
+</li>
+<li>files which do not contain a string <code>find /some_path -size +1c -name cafe.out ! -exec grep -l "Closing output file" {} \; -exec ls -l {} \;</code>
+</li>
+<li>find files of some type, and get the total size 
+<pre class="example">
+find /some_path/  -name "tree_gamz*root" -exec du -k {} \; | awk '{ total += $1 } END { print total/1024 " Mb total" }'
+</pre>
+
+</li>
+<li>find files of some type, created in the last hour, and remove them
+  <code>find /some_path/ -type f -mmin -240 -name \*png -exec rm -f {} \;</code>
+</li>
+<li>find files older that 5 days, and remove them <code>find /path/to/files*   -mtime +5 -exec rm {} \;</code>
+</li>
+<li>find and remove all the job output files older than 2 days (useful
+  on d0mino) <code>find . -maxdepth 1 -mtime +2 -regex '.*\.[oe][0-9]*'   -exec rm -f {} \;</code>
+</li>
+<li>find files that are readable by you, but not by everyone else. Make
+  it readable <code>find foo -type f -perm /u+r ! -perm /g+r -exec chmod   a+r {} \;</code>
+</li>
+</ul>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Printing, ps and pdf </h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> concatenate pdf files: </h3>
+<div class="outline-text-3" id="text-2-1">
+
+<p>  Several ways to do it. more ways at <a href="http://ansuz.sooke.bc.ca/software/pdf-append.php">this link</a> (and google
+  concatenate pdf)
+</p><ol>
+<li>texexec <code>texexec --pdfarrange --result out.pdf in1.pdf in2.pdf      in3.pdf ...</code>
+</li>
+<li>gs <code>gs -q -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=out.pdf file1.pdf file2.pdf file3.pdf -c quit</code>
+</li>
+<li>gs <code>gs -q -sPAPERSIZE=letter -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=out.pdf file1.pdf file2.pdf file3.pdf</code>
+</li>
+</ol>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> extract pages from a pdf file </h3>
+<div class="outline-text-3" id="text-2-2">
+
+<pre class="example">
+gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -dFirstPage="$FIRST" -dLastPage="$LAST" -sOutputFile="$OUTPUT" "$INPUT"=
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Print </h3>
+<div class="outline-text-3" id="text-2-3">
+
+<ul>
+<li>pretty print for a text file <code>enscript -p print.ps file.txt</code>
+</li>
+<li>psnup and print in one command
+<pre class="example">
+psnup -2 infile.ps | ssh lxplus "lpr -P -h -o duplex"
+</pre>
+
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Job processing (Vjets) </h2>
+<div class="outline-text-2" id="text-3">
+
+<ul>
+<li>check for each job that the correct number of files has been processed
+</li>
+</ul>
+
+
+
+
+<pre class="example">foreach X ( `find ./May09 -size +1c -name cafe.out` )                                                                   
+set flname=`grep "filelist:" $X | cut -d ":" -f 3`
+set cnt1=`grep "Input file opened:" $X | wc -l`
+set cnt2=`cat /rooms/lockbox/gerbaudo/work_area/hww/hww_May09/p2113/$flname | wc -l `
+echo "$flname : $cnt1 $cnt2"
+if ($cnt1 != $cnt2) then
+    echo "Somethinig is wrong"
+endif
+end
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Bash </h2>
+<div class="outline-text-2" id="text-4">
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Remove whitespace from filenames. </h3>
+<div class="outline-text-3" id="text-4-1">
+
+<p>  For example: rename something like <code>01 - La Boh_me _ Act 1 - _Questo Mar Rosso_.mp3</code> to <code>Act1-01-LaBoh_me_-_QuestoMarRosso_.mp3</code>
+  Use the following
+</p><pre class="example">
+for f in *.mp3; do mv "${f}" `echo $f | sed 's/\ //g' | sed 's/\(.*\)\(Act[0-9]\)\(.*\).mp3/\2-\1\3.mp3/g'`; done
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> ls with numeric permission </h3>
+<div class="outline-text-3" id="text-4-2">
+
+<p>   From <a href="http://stackoverflow.com/questions/1795976/can-the-unix-list-command-ls-output-numerical-chmod-permissions">stackoverflow</a>
+</p><pre class="example">
+ls -l | awk '{k=0;for(i=0;i&lt;=8;i++)k+=((substr($1,i+2,1)~/[rwx]/) \
+         *2^(8-i));if(k)printf("%0o ",k);print}'
+</pre>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Generic tasks </h2>
+<div class="outline-text-2" id="text-5">
+
+<ul>
+<li>display the directory tree: get <a href="http://mama.indstate.edu/users/ice/tree/">The Tree for Linux Homepage</a>
+</li>
+<li>extract basename <code>basename aaa.png .png</code>
+</li>
+<li>tar over ssh
+</li>
+</ul>
+
+<pre class="example">
+tar zcvf - datamcplots/MUON/*png | ssh lxplus.cern.ch "cat &gt; plots.tgz"
+</pre>
+
+<ul>
+<li>regular expressions : Use the online generator: <a href="http://txt2re.com">http://txt2re.com</a>
+</li>
+<li>password-less ssh: generate a keypair (or use an existing one)
+    <code>ssh-keygen -t rsa</code>. Then copy it:
+<pre class="example">
+ssh-copy-id -i ~/.ssh/id_rsa.pub user@remote-host
+</pre>
+
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> CERN </h2>
+<div class="outline-text-2" id="text-6">
+
+<p>  Generic list of useful commands (mostly SLC)
+</p>
+<ul>
+<li>Add lxplus users <code>/usr/sbin/addusercern loginid</code>
+</li>
+<li>Configuring printers (more examples at <a href="http://linux.web.cern.ch/linux/scientific5/docs/install.shtml">this web page</a>)
+
+
+
+<pre class="example">/usr/sbin/lpadmincern --building XXXX --list
+/usr/sbin/lpadmincern printername --add
+</pre>
+
+
+</li>
+<li>install g77
+  On SLC4, g77 is not installed by default <code>yum install compat-gcc-34-g77.x86_64</code>
+</li>
+<li>afs/html In order to create a website whose files reside on AFS, you
+  have to set (beforehand) the permissions of the directory. <a href="http://information-technology.web.cern.ch/services/fe/afs/howto/configure-afs-access-rights">Configure AFS Access Rights</a>
+<pre class="example">
+afind www/html -t d -e "fs setacl -dir {} -acl webserver:afs read"
+</pre>
+
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> ATLAS </h2>
+<div class="outline-text-2" id="text-7">
+
+
+</div>
+
+<div id="outline-container-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Getting started: </h3>
+<div class="outline-text-3" id="text-7-1">
+
+<p>   <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/WorkBook">computing workbook</a>, <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PhysicsAnalysisWorkBookRel15">analysis workbook</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Tools: </h3>
+<div class="outline-text-3" id="text-7-2">
+
+<ul>
+<li><a href="https://atlastagcollector.in2p3.fr">tag collector</a>
+</li>
+<li>4-day proxy: <code>-valid 100:00-</code>
+</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> IFAE </h2>
+<div class="outline-text-2" id="text-8">
+
+
+</div>
+
+<div id="outline-container-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Datasets </h3>
+<div class="outline-text-3" id="text-8-1">
+
+<p>   <a href="http://personal.ifae.es/jmontejo/datasetMonitor.html">Javier's monitor</a>, Jordi's pages: <a href="http://personal.ifae.es/jnadal/DataLists/">transfer status</a>, <a href="http://personal.ifae.es/jnadal/Monitoring/">space monitor</a>
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> cpp </h2>
+<div class="outline-text-2" id="text-9">
+
+
+</div>
+
+<div id="outline-container-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> Documentation </h3>
+<div class="outline-text-3" id="text-9-1">
+
+<p>   design patterns: <a href="http://sourcemaking.com/design_patterns">sourcemaking.com</a>, <a href="http://www.vincehuston.org/dp">vincehouston</a>
+</p><ul>
+<li>How to debug a library symbol. Get a  human readable name for the symbol <code>c++filt  _UndefinedSymbol_</code>
+  list the symbols defined in a library <code>nm libmypackage.so</code>
+</li>
+<li>profile some code <code>g++ -pg [or -ggdb ] &lt;whatever&gt;;   ./mycode.exe</code>. This produces gmon.out: <code>gprof ./mycode.exe gmon.out</code>
+  otherwise use <code>valgrind --tool=callgrind [another bunch of options]   ./mycode.exe</code>
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> cvs </h2>
+<div class="outline-text-2" id="text-10">
+
+<ul>
+<li>see the files that have changed, without modifying anything: <code>cvs -n update</code>
+</li>
+<li>list the files that have been changed between two dates
+<pre class="example">
+cvs diff -N -c -D YYYY-MM-DD -D YYYY-MM-DD | grep "Index:" &gt; diff.out
+</pre>
+
+</li>
+<li>Fix 'sticky tag for file "is not a branch"' error when trying to do
+  <code>cvs ci</code>: <code>cvs update -A myFile</code>
+</li>
+<li>List all the commits made by user after a date <code>cvs history -c -u username -D yyyy-mm-dd</code>
+</li>
+<li>Revert to a previous commit (say 1.5 is the wrong one)
+<pre class="example">
+cvs update -j 1.5 -j 1.4 filename
+cvs commit filename
+</pre>
+
+</li>
+<li>Create and apply a patch file
+
+
+
+<pre class="example">cd dir_with_file
+cvs diff -u8p file.cpp &gt; file.cpp.patch # '-u' unified format, with 8 lines of context
+patch file.cpp.patch
+</pre>
+
+
+</li>
+<li>Create a branch to test stuff
+
+
+
+<pre class="example">&gt; cvs up -A                                                                   # make sure everything is updated
+&gt; cvs tag DG_HWW_BASE_20110210                                                # Tag the base point of the new branch
+&gt; cvs tag -r DG_HWW_BASE_20110210 -b DG_HWW_BRANCH_20110210                   # Create branch based on base point.
+&gt; cvs up -r  DG_HWW_BRANCH_20110210                                           # switch to the new branch
+edit, modify and commit, _make_a_tag_ ! when you are done, then merge back into the main branch
+&gt; cvs up -A                                                                   # Get a Trunk working dir, to do the merge into
+&gt; cvs up -j DG_HWW_BRANCH_20110210                                            # Merge in changes from branch
+&gt; cvs -nq up                                                                  # Look for conflicts
+&gt; cvs ci -m "Results of merge from DG_HWW_BRANCH_20110210 branch."            # Commit changes into Trunk with meaningfull log message.
+</pre>
+
+
+<p>
+  See also <a href="http://acs.lbl.gov/~ksb/Scratch/cvs_branch.html">http://acs.lbl.gov/~ksb/Scratch/cvs_branch.html</a>
+</p></li>
+</ul>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> svn </h2>
+<div class="outline-text-2" id="text-11">
+
+<p>  Intro: many useful commands and tips are at the <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/SoftwareDevelopmentWorkBookSVN">ATLAS WorkBookSVN</a>. Repositories can be browsed online with <a href="https://svnweb.cern.ch/trac/atlasoff/browser">Trac</a> or <a href="https://svnweb.cern.ch/cern/wsvn/">WebSvn</a>
+</p>
+
+</div>
+
+<div id="outline-container-11-1" class="outline-3">
+<h3 id="sec-11-1"><span class="section-number-3">11.1</span> Configuration </h3>
+<div class="outline-text-3" id="text-11-1">
+
+
+</div>
+
+<div id="outline-container-11-1-1" class="outline-4">
+<h4 id="sec-11-1-1"><span class="section-number-4">11.1.1</span> Enable kerberos authentication </h4>
+<div class="outline-text-4" id="text-11-1-1">
+
+<p>   Add the following to your <code>.ssh/config</code> file:
+</p>
+
+
+<pre class="example">Host svn.cern.ch
+   User myusername
+   GSSAPIAuthentication yes
+   GSSAPIDelegateCredentials yes
+   Protocol 2
+   ForwardX11 no
+   IdentityFile ~/.ssh/id_rsa
+Host isscvs.cern.ch
+   User myusername    
+   GSSAPIAuthentication yes
+   GSSAPIDelegateCredentials yes
+   Protocol 2
+   ForwardX11 no
+   IdentityFile ~/.ssh/id_rsa
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-11-1-2" class="outline-4">
+<h4 id="sec-11-1-2"><span class="section-number-4">11.1.2</span> Ignore files that should not be tracked: </h4>
+<div class="outline-text-4" id="text-11-1-2">
+
+<p>    Type: <code>svn propedit svn:ignore ../D3PDBatchSkimming</code>, then add in there
+</p>
+
+
+<pre class="example">*.o
+*~
+*.log
+*.root
+</pre>
+
+
+<p>
+    Then commit <code>svn ci ../D3PDBatchSkimming</code>
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11-2" class="outline-3">
+<h3 id="sec-11-2"><span class="section-number-3">11.2</span> Checkout </h3>
+<div class="outline-text-3" id="text-11-2">
+
+
+</div>
+
+<div id="outline-container-11-2-1" class="outline-4">
+<h4 id="sec-11-2-1"><span class="section-number-4">11.2.1</span> Checkout only the trunk. and not all the tags </h4>
+<div class="outline-text-4" id="text-11-2-1">
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11-3" class="outline-3">
+<h3 id="sec-11-3"><span class="section-number-3">11.3</span> Create a local repository to play with </h3>
+<div class="outline-text-3" id="text-11-3">
+
+
+
+
+<pre class="example">svnadmin create /tmp/gerbaudo/temp_repos
+mkdir test_project
+svn import test_project file:///tmp/gerbaudo/temp_repos/test_project/trunk -m 'initial import'
+&lt; add files etc. &gt;
+svn mkdir file:///tmp/gerbaudo/temp_repos/test_project/tags
+svn copy file:///tmp/gerbaudo/temp_repos/test_project/trunk file:///tmp/gerbaudo/temp_repos/test_project/tags/v0-0-1 -m 'first tag'
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-11-4" class="outline-3">
+<h3 id="sec-11-4"><span class="section-number-3">11.4</span> Getting information </h3>
+<div class="outline-text-3" id="text-11-4">
+
+
+
+</div>
+
+<div id="outline-container-11-4-1" class="outline-4">
+<h4 id="sec-11-4-1"><span class="section-number-4">11.4.1</span> Filter commits </h4>
+<div class="outline-text-4" id="text-11-4-1">
+
+<p>    By username:
+</p><pre class="example">
+svn log | sed -n '/USERNAME/,/-----$/ p'
+</pre>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11-5" class="outline-3">
+<h3 id="sec-11-5"><span class="section-number-3">11.5</span> Tags </h3>
+<div class="outline-text-3" id="text-11-5">
+
+
+</div>
+
+<div id="outline-container-11-5-1" class="outline-4">
+<h4 id="sec-11-5-1"><span class="section-number-4">11.5.1</span> Create a tag </h4>
+<div class="outline-text-4" id="text-11-5-1">
+
+
+
+
+<pre class="example">svn copy \
+$SVNROOT/IFAEanalysis/AnaTools/Histogrammer/trunk \
+$SVNROOT/IFAEanalysis/AnaTools/Histogrammer/tags/Histogrammer-01-02-00 \
+-m "Tag after merging dev-dg-moveToCpp-06122011"
+</pre>
+
+
+<p>
+    Notes:
+</p><ol>
+<li>you can also specify a revision ('svn copy -r ABC &hellip;').
+</li>
+<li>make sure that the tag doesn't already exists, otherwise it will
+</li>
+</ol>
+
+<p>    create a copy inside it.
+</p></div>
+
+</div>
+
+<div id="outline-container-11-5-2" class="outline-4">
+<h4 id="sec-11-5-2"><span class="section-number-4">11.5.2</span> Update a working copy to another tag </h4>
+<div class="outline-text-4" id="text-11-5-2">
+
+<p>    Check with <code>svn info</code>, then <code>svn switch svn+ssh://&lt;SVNROOT&gt;/tags/&lt;MyNewTag&gt;</code>
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11-6" class="outline-3">
+<h3 id="sec-11-6"><span class="section-number-3">11.6</span> Diff </h3>
+<div class="outline-text-3" id="text-11-6">
+
+
+</div>
+
+<div id="outline-container-11-6-1" class="outline-4">
+<h4 id="sec-11-6-1"><span class="section-number-4">11.6.1</span> list differences between two tags </h4>
+<div class="outline-text-4" id="text-11-6-1">
+
+
+
+
+<pre class="example">svn diff --summarize \
+svn+ssh://svn.cern.ch/reps/atlasoff/Trigger/TrigAlgorithms/TrigT2CaloJet/tags/TrigT2CaloJet-00-01-09 \
+svn+ssh://svn.cern.ch/reps/atlasoff/Trigger/TrigAlgorithms/TrigT2CaloJet/tags/TrigT2CaloJet-00-01-06
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-11-6-2" class="outline-4">
+<h4 id="sec-11-6-2"><span class="section-number-4">11.6.2</span> diff without withespaces </h4>
+<div class="outline-text-4" id="text-11-6-2">
+
+<p>    <code>svn diff -x --ignore-space-change</code> or <code>snv diff -x --ignore-all-space</code>
+</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> Emacs </h2>
+<div class="outline-text-2" id="text-12">
+
+<ul>
+<li>Sort lines: select the region and the call the macro
+    <code>sort-lines</code>. If you want to sort the whole buffer: <code>C-x h &lt;RET&gt;     M-x sort-lines</code> (from <a href="http://edivad.wordpress.com">http://edivad.wordpress.com</a>)
+</li>
+</ul>
+
+
+
+</div>
+
+<div id="outline-container-12-1" class="outline-3">
+<h3 id="sec-12-1"><span class="section-number-3">12.1</span> Macros </h3>
+<div class="outline-text-3" id="text-12-1">
+
+<ul>
+<li>Define <code>C-x (</code> then <code>C-x )</code>
+</li>
+<li>Run: once <code>C-x e</code>, N times <code>Esc N C-x e</code>
+</li>
+<li>Assign a name and save for later usage: (1) give a name to the
+     macro <code>M-x name-last-kbd-macro RET my-cool-macro-name</code> , (2)
+     insert it into a buffer <code>C-x C-f ~/my-buffer.el</code>, then <code>M-x      insert-kbd-macro RET my-cool-macro-name</code>, then <code>C-x C-s</code>. When
+     you want to use the saved macro, either load it <code>M-x load-file      RET ~/my-buffer.el</code>, or add it to your <code>.emacs</code>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-12-2" class="outline-3">
+<h3 id="sec-12-2"><span class="section-number-3">12.2</span> org-mode </h3>
+<div class="outline-text-3" id="text-12-2">
+
+<ul>
+<li>remote publish: <a href="http://yenliangl.blogspot.com/2012/01/publish-org-to-remote-host-through-ssh.html">http://yenliangl.blogspot.com/2012/01/publish-org-to-remote-host-through-ssh.html</a>
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> git </h2>
+<div class="outline-text-2" id="text-13">
+
+<ul>
+<li>How to initialize central repository: 
+</li>
+</ul>
+
+<p>  If you're creating a repo that people are going to want to push to,
+  then you should create it using <code>git init --bare</code> (and <code>git init   --bare --shared</code> if several user accounts need access to it), or
+  <code>git clone --bare</code> if you're creating it by cloning an existing
+  repo.
+</p><ul>
+<li>Set the default editor:
+</li>
+</ul>
+
+<pre class="example">
+git config --global core.editor "emacs -nw"
+</pre>
+
+<ul>
+<li>Set other useful options:
+
+
+
+<pre class="example">git config --global user.name "First Last"
+git config --global user.email yourmail@yourdomain
+git config --global color.ui true
+</pre>
+
+
+</li>
+<li>Push to github without password
+
+
+
+<pre class="example">cd ~/.ssh
+ssh-keygen -p
+Enter file in which the key is (/home/&lt;user&gt;/.ssh/id_rsa): 
+Enter old passphrase: &lt;old one&gt;
+Key has comment '/home/&lt;user&gt;/.ssh/id_rsa'
+Enter new passphrase (empty for no passphrase): &lt;enter&gt;
+Enter same passphrase again: &lt;enter&gt;
+Your identification has been saved with the new passphrase.
+</pre>
+
+
+<p>
+   You also need to start ssh-agent
+</p><pre class="example">
+~/software/script/bash/start_ssh_agent.sh
+</pre>
+
+<p>   More info at <a href="http://stackoverflow.com/questions/7353040/how-to-setup-git-bash-msysgit-with-a-github-token-or-ssh-key">http://stackoverflow.com/questions/7353040/how-to-setup-git-bash-msysgit-with-a-github-token-or-ssh-key</a>
+</p></li>
+<li>clone my github repositories
+<pre class="example">
+git clone git@github.com:davidegerbaudo/configuration.git
+git clone git@github.com:davidegerbaudo/python-scripts
+</pre>
+
+</li>
+<li>Setup a remote master repo Say that for example you start working
+    on some project on computer A. You then realize that you would
+    like to have a master repository on computer B, because it's
+    accessible to other people and because it has a backup.  Then what
+    you do is:
+    On computer B:
+<pre class="example">
+mkdir foo.git
+cd foo.git
+git --bare init
+</pre>
+
+<p>    On computer A:
+</p><pre class="example">
+git remote add origin user@computerB:foo.git
+git push origin master
+</pre>
+
+</li>
+<li>push commits from submodule
+    By default, the submodule is checked out in 'bare' mode (see <a href="http://stackoverflow.com/questions/4445738/unable-to-push-commits-from-a-git-submodule">http://stackoverflow.com/questions/4445738/unable-to-push-commits-from-a-git-submodule</a>).
+    This is what you need to do in order to be able to push:
+
+
+
+<pre class="example">git checkout -b temp
+git checkout master
+git merge temp
+git branch -d temp
+git push origin master
+</pre>
+
+
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-13-1" class="outline-4">
+<h4 id="sec-13-1"><span class="section-number-4">13.1</span> Fix mistakes </h4>
+<div class="outline-text-4" id="text-13-1">
+
+<ul>
+<li>undo merge <code>git reset --hard commit_sha</code>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-13-2" class="outline-4">
+<h4 id="sec-13-2"><span class="section-number-4">13.2</span> Investigate </h4>
+<div class="outline-text-4" id="text-13-2">
+
+<ul>
+<li>list the files currently under revision <code>git ls-tree -r --name-only HEAD</code>
+</li>
+<li>list the files that were changed in a given commit
+<pre class="example">
+git show --pretty="format:" --name-only  commit_sha
+</pre>
+
+</li>
+<li>Check whether remote is ahead
+<pre class="example">
+git remote update # bring my remote up to date
+git status -uno   # check status
+</pre>
+
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> screen </h2>
+<div class="outline-text-2" id="text-14">
+
+
+</div>
+
+<div id="outline-container-14-1" class="outline-3">
+<h3 id="sec-14-1"><span class="section-number-3">14.1</span> My screenrc </h3>
+<div class="outline-text-3" id="text-14-1">
+
+<p>   Change the hardstatus settings to give an window list at the bottom of
+   the screen, with the time and date and with the current window
+   highlighted (from <a href="http://serverfault.com/questions/3740/what-are-useful-screenrc-settings">serverfault</a>):
+</p><pre class="example">
+hardstatus      alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-14-2" class="outline-3">
+<h3 id="sec-14-2"><span class="section-number-3">14.2</span> Fix suspended output </h3>
+<div class="outline-text-3" id="text-14-2">
+
+<p>   Sometimes, screen catches Ctrl-s and sends an XOFF to tty, suspending
+   the output. I haven't found a way (yet) to disable this annoying
+   feature. One can fix this by doing (from <a href="http://web.mit.edu/gnu/doc/html/screen_toc.html#SEC87">the screen manual</a>) : <code>C-a f</code>
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-15" class="outline-2">
+<h2 id="sec-15"><span class="section-number-2">15</span> Media </h2>
+<div class="outline-text-2" id="text-15">
+
+
+</div>
+
+<div id="outline-container-15-1" class="outline-3">
+<h3 id="sec-15-1"><span class="section-number-3">15.1</span> Latex and kindle </h3>
+<div class="outline-text-3" id="text-15-1">
+
+<p>   Get the source of the paper from from <a href="http://arxiv.org">arXiv</a>. Then pick one of the
+   two solutions below (from <a href="http://tex.stackexchange.com/questions/16735/latex-options-for-kindle">stackexchange</a>). The second one seems to
+   be slightly better
+</p>
+
+
+
+<pre class="example">\documentclass[10pt]{article}
+
+% put the other include first
+\usepackage{microtype}     % microtypography, reduces hyphenation
+\usepackage[papersize={108mm,144mm},margin=2mm]{geometry}  
+\sloppy 
+\pagestyle{empty} 
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+</pre>
+
+
+
+
+<pre class="example">\usepackage{graphicx}      % graphics support
+% sometimes breqn conflicts with other cern definitions
+% \usepackage{breqn}         % automatic equation breaking
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[font=small,labelformat=simple,]{caption}   % customizing captions
+\usepackage{titlesec}      % customizing section titles
+\titleformat{\section}{\itshape\large}{}{0em}{}
+\titlespacing{\section}{0pt}{8pt}{4pt}
+\titleformat{\subsection}{\itshape}{}{0em}{}
+\titlespacing{\subsection}{0pt}{4pt}{2pt}
+\titleformat{\subsubsection}[runin]{\bf\scshape}{}{0em}{}
+\titlespacing{\subsubsection}{0pt}{5pt}{5pt}
+\usepackage[papersize={3.6in,4.8in},hmargin=0.1in,vmargin={0.1in,0.1in}]{geometry}  % page geometry
+\usepackage{fancyhdr}   % headers and footers
+\pagestyle{fancy}
+\fancyhead{}            % clear page header
+\fancyfoot{}            % clear page footer
+\setlength{\abovecaptionskip}{2pt} % space above captions 
+\setlength{\belowcaptionskip}{0pt} % space below captions
+\setlength{\textfloatsep}{2pt}     % space between last top float or first bottom float and the text
+\setlength{\floatsep}{2pt}         % space left between floats
+\setlength{\intextsep}{2pt}        % space left on top and bottom of an in-text float
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-15-2" class="outline-3">
+<h3 id="sec-15-2"><span class="section-number-3">15.2</span> export youtube video </h3>
+<div class="outline-text-3" id="text-15-2">
+
+<p>   Get the video you want <code>~/bin/youtube-dl.py -t http://www.youtube.com/watch?v=my_video_identifier</code>
+   then convert it to mpg <code>ffmpeg -i input_file.flv output_file.mpg</code>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-15-3" class="outline-3">
+<h3 id="sec-15-3"><span class="section-number-3">15.3</span> Create a divx from a dvd </h3>
+<div class="outline-text-3" id="text-15-3">
+
+<p>   Two solutions
+</p>
+</div>
+
+<div id="outline-container-15-3-1" class="outline-4">
+<h4 id="sec-15-3-1"><span class="section-number-4">15.3.1</span> Two pass encode </h4>
+<div class="outline-text-4" id="text-15-3-1">
+
+<p>    Example 6.2. copy audio track
+</p>
+<p>
+    Two pass encode of the second track a DVD to an MPEG-4 ("DivX") AVI while copying the audio track.
+</p>
+
+
+<pre class="example">mencoder dvd://2 -ovc lavc -lavcopts vcodec=mpeg4:vpass=1 -oac copy -o /dev/null
+mencoder dvd://2 -ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell:vpass=2 -oac copy -o output.avi
+</pre>
+
+
+<p>
+    Example 6.3. encode audio track Two pass encode of a DVD to an
+    MPEG-4 ("DivX") AVI while encoding the audio track to MP3. Be
+    careful using this method as it may lead to audio/video desync in
+    some cases.
+</p>
+
+
+<pre class="example">mencoder dvd://2 -ovc lavc -lavcopts vcodec=mpeg4:vpass=1 \
+-oac mp3lame -lameopts vbr=3 -o /dev/null
+mencoder dvd://2 -ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell:vpass=2 \
+-oac mp3lame -lameopts vbr=3 -o output.avi
+</pre>
+
+
+<p>
+    See also <a href="http://www.mplayerhq.hu/DOCS/HTML/en/menc-feat-mpeg4.html">Encoding two pass MPEG-4</a> and <a href="http://www.axllent.org/docs/video/mencoder_dvd_to_mpeg4">MEncoder DVD to MPEG-4</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2012-05-16 20:09:53 CEST</p>
+<p class="author">Author: Davide Gerbaudo</p>
+<p class="creator">Org version 7.7 with Emacs version 23</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
